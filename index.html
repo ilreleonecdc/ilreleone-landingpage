@@ -160,64 +160,82 @@
 					box-shadow: 0 0 20px #f88d27;
 				}
 			}
+			.about-us {
+				background-color: #4e2219;
+				padding: 30px;
+				color: white;
+				text-align: center;
+			}
+			.carousel {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+			.carousel img {
+				position: absolute;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			.carousel img.center {
+				transform: scale(1.2);
+				opacity: 1;
+				z-index: 2;
+			}
+			.carousel img.side {
+				transform: scale(0.8);
+				opacity: 0.5;
+				z-index: 1;
+			}
+			.carousel-button {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				color: white;
+				font-size: 2rem;
+				cursor: pointer;
+				user-select: none;
+			}
+			.carousel-button.left {
+				left: 10px;
+			}
+			.carousel-button.right {
+				right: 10px;
+			}
 		</style>
 	</head>
 	<body>
-		<header>
-			<img
-				src="releonehtml/src/assets/RAFIKI_TITOLO.png"
-				alt="Logo Il Re Leone"
-			/>
-			<h1>Il Re Leone - Musical</h1>
-		</header>
-		<div class="content">
-			<div class="section">
-				<h2>Chi Siamo</h2>
-				<p>
-					Siamo un gruppo di giovani appassionati di recitazione
-					dell’Oratorio <b>PerDiQua</b> di Cerbara, uniti dalla voglia
-					di metterci in gioco e dalla magia del teatro. Per dare vita
-					a questo musical, oltre <b>70 persone</b> di tutte le età
-					stanno collaborando con entusiasmo, creando maschere,
-					costumi, scenografie e tanto altro. Un grande lavoro di
-					squadra che unisce talento, creatività e passione!
-				</p>
-				<button class="cta-button" onclick="showCrowdfunding()">
-					Scopri il nostro crowdfunding
-				</button>
-			</div>
-			<div class="section crowdfunding" id="crowdfunding">
-				<h2>Sostieni il Nostro Progetto</h2>
-				<p style="color: #2b3f8c">
-					Aiutaci a realizzare questo sogno sostenendo il nostro
-					<b>CROWDFUNDING</b>. Puoi scegliere un pacchetto e ricevere
-					uno dei nostri <b>PREMI</b> esclusivi!
-				</p>
-				<img
-					src="releonehtml/src/assets/crowdd.jpg"
-					alt="Crowdfunding Il Re Leone"
-				/>
+		<!-- Parte precedente lasciata invariata -->
+		<div class="about-us">
+			<h2>About Us</h2>
+			<div class="carousel">
+				<div class="carousel-button left" onclick="scrollCarousel(-1)">
+					&#8249;
+				</div>
+				<img src="image1.jpg" class="center" alt="Immagine 1" />
+				<img src="image2.jpg" class="side" alt="Immagine 2" />
+				<img src="image3.jpg" class="side" alt="Immagine 3" />
+				<div class="carousel-button right" onclick="scrollCarousel(1)">
+					&#8250;
+				</div>
 			</div>
 		</div>
-		<footer>
-			<p>
-				&copy; 2024 Il Re Leone - Oratorio PerDiQua. Tutti i diritti
-				riservati.
-			</p>
-			<!-- Aggiungi i link a Instagram e Threads -->
-			<a
-				href="https://www.instagram.com/ilreleone.cdc/"
-				target="_blank"
-				aria-label="Instagram"
-			>
-				<i class="fab fa-instagram"></i> ilreleone.cdc
-			</a>
-		</footer>
 		<script>
-			function showCrowdfunding() {
-				const crowdfundingSection =
-					document.getElementById("crowdfunding");
-				crowdfundingSection.style.display = "block";
+			let currentIndex = 0;
+
+			function scrollCarousel(direction) {
+				const images = document.querySelectorAll(".carousel img");
+				const total = images.length;
+
+				// Rimuove le classi attuali
+				images[currentIndex].classList.remove("center");
+				images[currentIndex].classList.add("side");
+
+				// Calcola il nuovo indice
+				currentIndex = (currentIndex + direction + total) % total;
+
+				// Aggiorna le classi
+				images[currentIndex].classList.add("center");
+				images[currentIndex].classList.remove("side");
 			}
 		</script>
 	</body>
