@@ -1,0 +1,134 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #face06;
+            background-color: #2b3f8c;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #face06;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-out;
+        }
+        header img {
+            max-width: 100px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        header img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        h1, h2 {
+            color: #d0181f;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #f88d27; /* Nuovo colore per i sottotitoli */
+        }
+        p {
+            line-height: 1.6;
+        }
+        .crowdfunding {
+            display: none;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out forwards;
+            border-left: 5px solid #f88d27; /* Evidenza con il nuovo colore */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f88d27; /* Nuovo colore per i pulsanti */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #face06;
+            color: #4e2219;
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #f88d27;
+            color: #4e2219;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 2px;
+            background: linear-gradient(90deg, #d0181f, #f88d27, #d0181f);
+            animation: moveLine 5s linear infinite;
+        }
+        a {
+            color: #d0181f;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animazioni */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes moveLine {
+            from {
+                left: -50%;
+            }
+            to {
+                left: 100%;
+            }
+        }
