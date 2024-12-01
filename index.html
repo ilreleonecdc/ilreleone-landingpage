@@ -55,43 +55,6 @@
 			p {
 				line-height: 1.6;
 			}
-			.crowdfunding {
-				display: none;
-				background-color: #fff;
-				border-radius: 10px;
-				padding: 20px;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				border-left: 5px solid #f88d27;
-			}
-			img {
-				max-width: 100%;
-				height: auto;
-				border-radius: 10px;
-				transition: transform 0.5s ease, opacity 0.5s ease;
-			}
-			img:hover {
-				transform: scale(1.05);
-				opacity: 0.9;
-			}
-			.cta-button {
-				display: inline-block;
-				padding: 15px 30px;
-				background-color: #f88d27;
-				color: white;
-				border-radius: 10px;
-				font-size: 1.2rem;
-				font-weight: bold;
-				text-decoration: none;
-				margin: 20px auto;
-				cursor: pointer;
-				transition: all 0.4s ease;
-				animation: pulse 2s infinite;
-			}
-			.cta-button:hover {
-				background-color: #face06;
-				color: #4e2219;
-				transform: scale(1.1) rotate(-2deg);
-			}
 			.about-us {
 				background-color: #4e2219;
 				padding: 30px;
@@ -103,6 +66,7 @@
 				justify-content: center;
 				align-items: center;
 				position: relative;
+				height: 250px;
 				overflow: hidden;
 			}
 			.carousel img {
@@ -162,21 +126,6 @@
 					costumi, scenografie e tanto altro. Un grande lavoro di
 					squadra che unisce talento, creatività e passione!
 				</p>
-				<button class="cta-button" onclick="showCrowdfunding()">
-					Scopri il nostro crowdfunding
-				</button>
-			</div>
-			<div class="section crowdfunding" id="crowdfunding">
-				<h2>Sostieni il Nostro Progetto</h2>
-				<p style="color: #2b3f8c">
-					Aiutaci a realizzare questo sogno sostenendo il nostro
-					<b>CROWDFUNDING</b>. Puoi scegliere un pacchetto e ricevere
-					uno dei nostri <b>PREMI</b> esclusivi!
-				</p>
-				<img
-					src="releonehtml/src/assets/crowdd.jpg"
-					alt="Crowdfunding Il Re Leone"
-				/>
 			</div>
 		</div>
 		<div class="about-us">
@@ -189,21 +138,9 @@
 				<div class="carousel-button left" onclick="scrollCarousel(-1)">
 					&#8249;
 				</div>
-				<img
-					src="/releonehtml/src/assets/11215319-pianeta-terra-con-alba-nel-spazio-foto.jpg"
-					class="center"
-					alt="Immagine 1"
-				/>
-				<img
-					src="/releonehtml/src/assets/13-Val-dOrcia-giu.2019_DSC7239-860x550.jpg"
-					class="side"
-					alt="Immagine 2"
-				/>
-				<img
-					src="/releonehtml/src/assets/37371298-ai-generato-un-coppia-di-amore-fa-un-a-forma-di-cuore-gesto-mentre-il-tramonto-ai-sfondo-foto.jpg"
-					class="side"
-					alt="Immagine 3"
-				/>
+				<img src="image1.jpg" class="center" alt="Immagine 1" />
+				<img src="image2.jpg" class="side" alt="Immagine 2" />
+				<img src="image3.jpg" class="side" alt="Immagine 3" />
 				<div class="carousel-button right" onclick="scrollCarousel(1)">
 					&#8250;
 				</div>
@@ -214,21 +151,8 @@
 				&copy; 2024 Il Re Leone - Oratorio PerDiQua. Tutti i diritti
 				riservati.
 			</p>
-			<a
-				href="https://www.instagram.com/ilreleone.cdc/"
-				target="_blank"
-				aria-label="Instagram"
-			>
-				<i class="fab fa-instagram"></i> ilreleone.cdc
-			</a>
 		</footer>
 		<script>
-			function showCrowdfunding() {
-				const crowdfundingSection =
-					document.getElementById("crowdfunding");
-				crowdfundingSection.style.display = "block";
-			}
-
 			let currentIndex = 0;
 			let startX = 0;
 
