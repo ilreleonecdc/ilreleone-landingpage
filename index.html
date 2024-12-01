@@ -10,7 +10,7 @@
 		/>
 		<style>
 			body {
-				font-family: "Roboto", Arial, sans-serif; /* Font aggiornato */
+				font-family: "Roboto", Arial, sans-serif;
 				margin: 0;
 				padding: 0;
 				color: #face06;
@@ -20,15 +20,14 @@
 			header {
 				background-color: #face06;
 				color: white;
-				padding: 20px 10px; /* Margine uniforme */
+				padding: 20px 10px;
 				text-align: center;
 				position: relative;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				animation: slideDown 1s ease-out;
 			}
 			header img {
-				max-width: 300px; /* Dimensione del logo aumentata */
-				margin-bottom: 5px; /* Spazio ridotto tra il logo e il titolo */
+				max-width: 300px;
+				margin-bottom: 5px;
 				transition: transform 0.3s ease;
 			}
 			header img:hover {
@@ -39,17 +38,15 @@
 			}
 			.section {
 				margin-bottom: 30px;
-				text-align: center; /* Centra il contenuto delle sezioni */
+				text-align: center;
 			}
 			h1,
 			h2 {
 				color: #d0181f;
-				margin-top: 0; /* Rimuove margini inutili */
 			}
 			h1 {
 				font-size: 2.5rem;
 				text-transform: uppercase;
-				animation: fadeIn 1s ease-in-out;
 			}
 			h2 {
 				font-size: 2rem;
@@ -67,16 +64,6 @@
 				animation: fadeIn 1s ease-out forwards;
 				border-left: 5px solid #f88d27;
 			}
-			img {
-				max-width: 100%;
-				height: auto;
-				border-radius: 10px;
-				transition: transform 0.5s ease, opacity 0.5s ease;
-			}
-			img:hover {
-				transform: scale(1.05);
-				opacity: 0.9;
-			}
 			.cta-button {
 				display: inline-block;
 				padding: 15px 30px;
@@ -89,7 +76,6 @@
 				margin: 20px auto;
 				cursor: pointer;
 				transition: all 0.4s ease;
-				animation: pulse 2s infinite;
 			}
 			.cta-button:hover {
 				background-color: #face06;
@@ -101,25 +87,60 @@
 				color: #4e2219;
 				text-align: center;
 				padding: 10px 0;
-				position: relative;
-				overflow: hidden;
 			}
-			footer::after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: -50%;
-				width: 200%;
-				height: 2px;
-				background: linear-gradient(90deg, #d0181f, #f88d27, #d0181f);
-				animation: moveLine 5s linear infinite;
+			footer .social-links {
+				margin-top: 10px;
 			}
-			a {
-				color: #2b3f8c;
+			footer .social-links a {
+				display: inline-flex;
+				align-items: center;
+				margin: 0 15px;
+				color: #4e2219;
 				text-decoration: none;
+				font-size: 1.2rem;
+				transition: color 0.3s ease;
 			}
-			a:hover {
-				text-decoration: underline;
+			footer .social-links a i {
+				font-size: 2rem; /* Dimensione delle icone */
+				margin-right: 10px;
+			}
+			footer .social-links a:hover {
+				color: #d0181f;
+			}
+
+			/* Ottimizzazioni per desktop */
+			@media (min-width: 768px) {
+				header {
+					padding: 30px 20px;
+				}
+				header img {
+					max-width: 400px; /* Logo più grande su desktop */
+				}
+				.content {
+					max-width: 800px;
+					margin: 0 auto; /* Centra il contenuto */
+				}
+				h1 {
+					font-size: 3rem; /* Titolo più grande su desktop */
+				}
+				h2 {
+					font-size: 2.5rem; /* Sottotitoli più grandi */
+				}
+				p {
+					font-size: 1.2rem; /* Testo più leggibile */
+				}
+				.cta-button {
+					font-size: 1.4rem; /* Bottoni più grandi */
+				}
+				footer {
+					padding: 20px 0;
+				}
+				footer .social-links a {
+					font-size: 1.5rem; /* Testo delle icone più grande */
+				}
+				footer .social-links a i {
+					font-size: 2.5rem; /* Icone più grandi su desktop */
+				}
 			}
 
 			/* Animazioni */
@@ -131,33 +152,6 @@
 				to {
 					opacity: 1;
 					transform: translateY(0);
-				}
-			}
-			@keyframes slideDown {
-				from {
-					transform: translateY(-100%);
-				}
-				to {
-					transform: translateY(0);
-				}
-			}
-			@keyframes moveLine {
-				from {
-					left: -50%;
-				}
-				to {
-					left: 100%;
-				}
-			}
-			@keyframes pulse {
-				0%,
-				100% {
-					transform: scale(1);
-					box-shadow: 0 0 5px #f88d27;
-				}
-				50% {
-					transform: scale(1.1);
-					box-shadow: 0 0 20px #f88d27;
 				}
 			}
 		</style>
@@ -204,22 +198,22 @@
 				&copy; 2024 Il Re Leone - Oratorio PerDiQua. Tutti i diritti
 				riservati.
 			</p>
-			<!-- Aggiungi i link a Instagram e Threads -->
-			<a
-				href="https://www.instagram.com/ilreleone.cdc/"
-				target="_blank"
-				aria-label="Instagram"
-			>
-				<i class="fab fa-instagram"></i> ilreleone.cdc
-			</a>
-			<a
-				href="https://www.threads.net/@ilreleone.cdc/"
-				target="_blank"
-				aria-label="Threads"
-			>
-				<i class="fab fa-twitter"></i> @ilreleone.cdc
-				<!-- Threads non ha un'icona dedicata, puoi usare un'icona simile -->
-			</a>
+			<div class="social-links">
+				<a
+					href="https://www.instagram.com/ilreleone.cdc/"
+					target="_blank"
+					aria-label="Instagram"
+				>
+					<i class="fab fa-instagram"></i> ilreleone.cdc
+				</a>
+				<a
+					href="https://www.threads.net/@ilreleone.cdc/"
+					target="_blank"
+					aria-label="Threads"
+				>
+					<i class="fab fa-twitter"></i> ilreleone.cdc
+				</a>
+			</div>
 		</footer>
 		<script>
 			function showCrowdfunding() {
