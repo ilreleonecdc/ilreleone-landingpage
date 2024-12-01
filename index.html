@@ -10,7 +10,7 @@
 		/>
 		<style>
 			body {
-				font-family: "Roboto", Arial, sans-serif; /* Font aggiornato */
+				font-family: "Roboto", Arial, sans-serif;
 				margin: 0;
 				padding: 0;
 				color: #face06;
@@ -20,15 +20,14 @@
 			header {
 				background-color: #face06;
 				color: white;
-				padding: 20px 10px; /* Margine uniforme */
+				padding: 20px 10px;
 				text-align: center;
 				position: relative;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				animation: slideDown 1s ease-out;
 			}
 			header img {
-				max-width: 300px; /* Dimensione del logo aumentata */
-				margin-bottom: 5px; /* Spazio ridotto tra il logo e il titolo */
+				max-width: 300px;
+				margin-bottom: 5px;
 				transition: transform 0.3s ease;
 			}
 			header img:hover {
@@ -39,17 +38,15 @@
 			}
 			.section {
 				margin-bottom: 30px;
-				text-align: center; /* Centra il contenuto delle sezioni */
+				text-align: center;
 			}
 			h1,
 			h2 {
 				color: #d0181f;
-				margin-top: 0; /* Rimuove margini inutili */
 			}
 			h1 {
 				font-size: 2.5rem;
 				text-transform: uppercase;
-				animation: fadeIn 1s ease-in-out;
 			}
 			h2 {
 				font-size: 2rem;
@@ -64,7 +61,6 @@
 				border-radius: 10px;
 				padding: 20px;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				animation: fadeIn 1s ease-out forwards;
 				border-left: 5px solid #f88d27;
 			}
 			img {
@@ -96,70 +92,6 @@
 				color: #4e2219;
 				transform: scale(1.1) rotate(-2deg);
 			}
-			footer {
-				background-color: #f88d27;
-				color: #4e2219;
-				text-align: center;
-				padding: 10px 0;
-				position: relative;
-				overflow: hidden;
-			}
-			footer::after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: -50%;
-				width: 200%;
-				height: 2px;
-				background: linear-gradient(90deg, #d0181f, #f88d27, #d0181f);
-				animation: moveLine 5s linear infinite;
-			}
-			a {
-				color: #2b3f8c;
-				text-decoration: none;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-
-			/* Animazioni */
-			@keyframes fadeIn {
-				from {
-					opacity: 0;
-					transform: translateY(20px);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
-			@keyframes slideDown {
-				from {
-					transform: translateY(-100%);
-				}
-				to {
-					transform: translateY(0);
-				}
-			}
-			@keyframes moveLine {
-				from {
-					left: -50%;
-				}
-				to {
-					left: 100%;
-				}
-			}
-			@keyframes pulse {
-				0%,
-				100% {
-					transform: scale(1);
-					box-shadow: 0 0 5px #f88d27;
-				}
-				50% {
-					transform: scale(1.1);
-					box-shadow: 0 0 20px #f88d27;
-				}
-			}
 			.about-us {
 				background-color: #4e2219;
 				padding: 30px;
@@ -171,6 +103,7 @@
 				justify-content: center;
 				align-items: center;
 				position: relative;
+				overflow: hidden;
 			}
 			.carousel img {
 				position: absolute;
@@ -200,6 +133,12 @@
 			}
 			.carousel-button.right {
 				right: 10px;
+			}
+			footer {
+				background-color: #f88d27;
+				color: #4e2219;
+				text-align: center;
+				padding: 10px 0;
 			}
 		</style>
 	</head>
@@ -242,7 +181,11 @@
 		</div>
 		<div class="about-us">
 			<h2>About Us</h2>
-			<div class="carousel">
+			<div
+				class="carousel"
+				ontouchstart="startTouch(event)"
+				ontouchmove="moveTouch(event)"
+			>
 				<div class="carousel-button left" onclick="scrollCarousel(-1)">
 					&#8249;
 				</div>
@@ -275,6 +218,7 @@
 			}
 
 			let currentIndex = 0;
+			let startX = 0;
 
 			function scrollCarousel(direction) {
 				const images = document.querySelectorAll(".carousel img");
@@ -290,6 +234,25 @@
 				// Aggiorna le classi
 				images[currentIndex].classList.add("center");
 				images[currentIndex].classList.remove("side");
+			}
+
+			function startTouch(event) {
+				startX = event.touches[0].clientX;
+			}
+
+			function moveTouch(event) {
+				if (!startX) return;
+
+				const currentX = event.touches[0].clientX;
+				const diffX = startX - currentX;
+
+				if (diffX > 50) {
+					scrollCarousel(1); // Scorri a destra
+					startX = 0;
+				} else if (diffX < -50) {
+					scrollCarousel(-1); // Scorri a sinistra
+					startX = 0;
+				}
 			}
 		</script>
 	</body>
