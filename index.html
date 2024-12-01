@@ -20,7 +20,7 @@
 			header {
 				background-color: #face06;
 				color: white;
-				padding: 20px 10px;
+				padding: 20px 10px; /* Per telefono */
 				text-align: center;
 				position: relative;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -61,7 +61,6 @@
 				border-radius: 10px;
 				padding: 20px;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				animation: fadeIn 1s ease-out forwards;
 				border-left: 5px solid #f88d27;
 			}
 			.cta-button {
@@ -101,15 +100,15 @@
 				transition: color 0.3s ease;
 			}
 			footer .social-links a i {
-				font-size: 2rem; /* Dimensione delle icone */
+				font-size: 2rem;
 				margin-right: 10px;
 			}
 			footer .social-links a:hover {
 				color: #d0181f;
 			}
 
-			/* Ottimizzazioni per desktop */
-			@media (min-width: 768px) {
+			/* Ottimizzazione per desktop */
+			@media (min-width: 1024px) {
 				header {
 					padding: 30px 20px;
 				}
@@ -121,25 +120,21 @@
 					margin: 0 auto; /* Centra il contenuto */
 				}
 				h1 {
-					font-size: 3rem; /* Titolo più grande su desktop */
+					font-size: 3rem;
 				}
 				h2 {
-					font-size: 2.5rem; /* Sottotitoli più grandi */
+					font-size: 2.5rem;
 				}
 				p {
-					font-size: 1.2rem; /* Testo più leggibile */
+					font-size: 1.2rem;
+				}
+				.crowdfunding img {
+					max-width: 600px; /* Limita larghezza immagine */
+					margin: 0 auto;
+					display: block; /* Centra l'immagine */
 				}
 				.cta-button {
-					font-size: 1.4rem; /* Bottoni più grandi */
-				}
-				footer {
-					padding: 20px 0;
-				}
-				footer .social-links a {
-					font-size: 1.5rem; /* Testo delle icone più grande */
-				}
-				footer .social-links a i {
-					font-size: 2.5rem; /* Icone più grandi su desktop */
+					font-size: 1.4rem;
 				}
 			}
 
@@ -205,13 +200,6 @@
 					aria-label="Instagram"
 				>
 					<i class="fab fa-instagram"></i> ilreleone.cdc
-				</a>
-				<a
-					href="https://www.threads.net/@ilreleone.cdc/"
-					target="_blank"
-					aria-label="Threads"
-				>
-					<i class="fab fa-twitter"></i> ilreleone.cdc
 				</a>
 			</div>
 		</footer>
