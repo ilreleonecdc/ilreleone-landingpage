@@ -20,14 +20,15 @@
 			header {
 				background-color: #face06;
 				color: white;
-				padding: 20px 10px;
+				padding: 20px 10px; /* Margine uniforme */
 				text-align: center;
 				position: relative;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				animation: slideDown 1s ease-out;
 			}
 			header img {
-				max-width: 300px;
-				margin-bottom: 5px;
+				max-width: 300px; /* Dimensione del logo aumentata */
+				margin-bottom: 5px; /* Spazio ridotto tra il logo e il titolo */
 				transition: transform 0.3s ease;
 			}
 			header img:hover {
@@ -38,15 +39,17 @@
 			}
 			.section {
 				margin-bottom: 30px;
-				text-align: center;
+				text-align: center; /* Centra il contenuto delle sezioni */
 			}
 			h1,
 			h2 {
 				color: #d0181f;
+				margin-top: 0; /* Rimuove margini inutili */
 			}
 			h1 {
 				font-size: 2.5rem;
 				text-transform: uppercase;
+				animation: fadeIn 1s ease-in-out;
 			}
 			h2 {
 				font-size: 2rem;
@@ -61,7 +64,18 @@
 				border-radius: 10px;
 				padding: 20px;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				animation: fadeIn 1s ease-out forwards;
 				border-left: 5px solid #f88d27;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 10px;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			img:hover {
+				transform: scale(1.05);
+				opacity: 0.9;
 			}
 			.cta-button {
 				display: inline-block;
@@ -75,30 +89,12 @@
 				margin: 20px auto;
 				cursor: pointer;
 				transition: all 0.4s ease;
+				animation: pulse 2s infinite;
 			}
 			.cta-button:hover {
 				background-color: #face06;
 				color: #4e2219;
 				transform: scale(1.1) rotate(-2deg);
-			}
-			.image-gallery {
-				overflow-x: auto;
-				white-space: nowrap;
-				padding: 20px 0;
-				background-color: #fff;
-				scroll-behavior: smooth;
-			}
-			.image-gallery img {
-				display: inline-block;
-				height: 150px;
-				margin: 0 10px;
-				border-radius: 10px;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-				transition: transform 0.3s ease, opacity 0.3s ease;
-			}
-			.image-gallery img:hover {
-				transform: scale(1.1);
-				opacity: 0.9;
 			}
 			footer {
 				background-color: #f88d27;
@@ -106,13 +102,36 @@
 				text-align: center;
 				padding: 10px 0;
 				position: relative;
+				overflow: hidden;
 			}
-			footer a {
-				color: #4e2219;
+			footer::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -50%;
+				width: 200%;
+				height: 2px;
+				background: linear-gradient(90deg, #d0181f, #f88d27, #d0181f);
+				animation: moveLine 5s linear infinite;
+			}
+			a {
+				color: #2b3f8c;
 				text-decoration: none;
 			}
-			footer a:hover {
+			a:hover {
 				text-decoration: underline;
+			}
+
+			/* Animazioni */
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 			@keyframes slideDown {
 				from {
@@ -120,6 +139,25 @@
 				}
 				to {
 					transform: translateY(0);
+				}
+			}
+			@keyframes moveLine {
+				from {
+					left: -50%;
+				}
+				to {
+					left: 100%;
+				}
+			}
+			@keyframes pulse {
+				0%,
+				100% {
+					transform: scale(1);
+					box-shadow: 0 0 5px #f88d27;
+				}
+				50% {
+					transform: scale(1.1);
+					box-shadow: 0 0 20px #f88d27;
 				}
 			}
 		</style>
@@ -161,17 +199,19 @@
 				/>
 			</div>
 		</div>
-		<div class="image-gallery">
-			<img src="releonehtml/src/assets/image1.jpg" alt="Immagine 1" />
-			<img src="releonehtml/src/assets/image2.jpg" alt="Immagine 2" />
-			<img src="releonehtml/src/assets/image3.jpg" alt="Immagine 3" />
-			<img src="releonehtml/src/assets/image4.jpg" alt="Immagine 4" />
-		</div>
 		<footer>
 			<p>
 				&copy; 2024 Il Re Leone - Oratorio PerDiQua. Tutti i diritti
 				riservati.
 			</p>
+			<!-- Aggiungi i link a Instagram e Threads -->
+			<a
+				href="https://www.instagram.com/ilreleone.cdc/"
+				target="_blank"
+				aria-label="Instagram"
+			>
+				<i class="fab fa-instagram"></i> ilreleone.cdc
+			</a>
 		</footer>
 		<script>
 			function showCrowdfunding() {
