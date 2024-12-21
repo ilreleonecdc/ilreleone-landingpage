@@ -2,282 +2,86 @@
 <html lang="it">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Il Re Leone - Musical</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<style>
-			body {
-				font-family: "Roboto", Arial, sans-serif;
-				margin: 0;
-				padding: 0;
-				color: #face06;
-				background-color: #2b3f8c;
-				overflow-x: hidden;
-			}
-			.section {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-			}
-			header {
-				background-color: #face06;
-				color: white;
-				padding: 20px 10px;
-				text-align: center;
-				position: relative;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				animation: slideDown 1s ease-out;
-			}
-			header img {
-				max-width: 150px;
-				margin-bottom: 5px;
-				transition: transform 0.3s ease;
-			}
-			header img:hover {
-				transform: scale(1.2);
-			}
-			.content {
-				padding: 20px;
-			}
-			.section {
-				margin-bottom: 30px;
-				text-align: center;
-			}
-			h1,
-			h2 {
-				font-family: lithos-pro, sans-serif;
-				font-style: black;
-				font-weight: 200;
-				color: #d0181f;
-				margin-top: 0;
-			}
-			h1 {
-				font-size: 2.5rem;
-				text-transform: uppercase;
-				animation: fadeIn 1s ease-in-out;
-			}
-			h2 {
-				font-size: 2rem;
-				color: #f88d27;
-			}
-			p {
-				line-height: 1.6;
-			}
-			.crowdfunding {
-				display: none;
-				background-color: #fff;
-				border-radius: 10px;
-				padding: 20px;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				animation: fadeIn 1s ease-out forwards;
-				border-left: 5px solid #f88d27;
-			}
-			img {
-				max-width: 100%;
-				height: auto;
-				border-radius: 10px;
-				transition: transform 0.5s ease, opacity 0.5s ease;
-			}
-			img:hover {
-				transform: scale(1.05);
-				opacity: 0.9;
-			}
-			.cta-button {
-				display: inline-block;
-				padding: 15px 30px;
-				background-color: #f88d27;
-				color: white;
-				border-radius: 10px;
-				font-size: 1.2rem;
-				font-weight: bold;
-				text-decoration: none;
-				margin: 20px auto;
-				cursor: pointer;
-				transition: all 0.4s ease;
-				animation: pulse 2s infinite;
-			}
-			.cta-button:hover {
-				background-color: #face06;
-				color: #4e2219;
-				transform: scale(1.1) rotate(-2deg);
-			}
-			footer {
-				background-color: #2b3f8c;
-				color: #face06;
-				text-align: center;
-				padding: 10px 0;
-				position: relative;
-				overflow: hidden;
-			}
-			/* Sezione Photo Gallery */
-			#photo-gallery {
-				background-color: #d0181f;
-				color: #face06;
-				padding: 40px 20px;
-				min-height: 500px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-			}
-
-			#photo-gallery h2 {
-				color: #face06;
-				text-align: center;
-				margin-bottom: 20px;
-			}
-
-			/* Miglioramenti Card */
-			.custom-card {
-				width: 100%;
-				max-width: 800px;
-				height: 450px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				overflow: hidden;
-				border-radius: 15px;
-			}
-
-			/* Adattamento immagini */
-			.custom-card img {
-				width: auto;
-				height: 100%;
-				max-height: 100%;
-				object-fit: contain;
-				border-radius: 15px;
-				box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-				transition: transform 0.3s ease, opacity 0.3s ease;
-			}
-
-			.custom-card img:hover {
-				transform: scale(1.05);
-				opacity: 0.9;
-			}
-
-			/* Controlli del carosello migliorati */
-			.carousel-control-prev,
-			.carousel-control-next {
-				width: 5%;
-			}
-
-			#photo-gallery .carousel-inner img {
-				width: auto;
-				height: auto;
-				object-fit: contain;
-				border-radius: 25px;
-				box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
-
-			#photo-gallery .carousel-inner img:hover {
-				transform: translateY(-5px);
-				box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
-			}
-			@keyframes fadeIn {
-				from {
-					opacity: 0;
-					transform: translateY(20px);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
-			@keyframes slideDown {
-				from {
-					transform: translateY(-100%);
-				}
-				to {
-					transform: translateY(0);
-				}
-			}
-			@keyframes pulse {
-				0%,
-				100% {
-					transform: scale(1);
-					box-shadow: 0 0 5px #f88d27;
-				}
-				50% {
-					transform: scale(1.1);
-					box-shadow: 0 0 20px #f88d27;
-				}
-			}
-		</style>
+		<meta name="viewport" content="width=device.width, initial-scale=1.0" />
+		<title>Il Re Leone - Il Musical</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<header class="section">
-			<img
-				src="releonehtml/src/assets/RAFIKI_TITOLO.png"
-				alt="Logo Il Re Leone"
-			/>
-			<h1>Il Re Leone - Musical</h1>
-		</header>
-		<div class="content">
-			<div class="section">
-				<h2>Chi Siamo</h2>
-				<p>
-					Siamo un gruppo di giovani appassionati di recitazione
-					dell’Oratorio <b>PerDiQua</b> di Cerbara, uniti dalla voglia
-					di metterci in gioco e dalla magia del teatro. Per dare vita
-					a questo musical, oltre <b>70 persone</b> di tutte le età
-					stanno collaborando con entusiasmo, creando maschere,
-					costumi, scenografie e tanto altro. Un grande lavoro di
-					squadra che unisce talento, creatività e passione!
-				</p>
-				<button class="cta-button" onclick="showCrowdfunding()">
-					Scopri il nostro crowdfunding
-				</button>
-			</div>
-			<div class="section" id="crowdfunding">
-				<h2>Sostieni il Nostro Progetto</h2>
-				<p style="color: #2b3f8c">
-					Aiutaci a realizzare questo sogno sostenendo il nostro
-					<b>CROWDFUNDING</b>. Puoi scegliere un pacchetto e ricevere
-					uno dei nostri <b>PREMI</b> esclusivi!
-				</p>
+			<div id="header-section">
 				<img
-					src="releonehtml/src/assets/crowdd.jpg"
-					alt="Crowdfunding Il Re Leone"
+					id="logo"
+					src="./assets/RAFIKI_TITOLO.png"
+					alt="Il Re Leone - Il Musical"
 				/>
-			</div>
-			<section class="section">
-				<div class="div-rosso">
-					<h1>Photo Gallery</h1>
-					<h3>Coming soon</h3>
+				<div id="text">
+					<h1 class="testo" id="tile-header">IL RE LEONE</h1>
+					<h2 class="testo">Il Musical</h2>
 				</div>
-			</section>
-		</div>
+			</div>
+		</header>
+		<section class="section">
+			<div class="div-blu">
+				<h1 id="chisiamo">Chi Siamo</h1>
+				<div class="scrittalogo">
+					<p id="descrizione">
+						Siamo un gruppo di giovani appassionati di recitazione
+						dell'Oratorio <b>PerDiQua</b> di Cerbara, uniti dalla
+						voglia di metterci in gioco e dalla magia del teatro.
+						Per dare vita a questo musical, oltre
+						<b>70 persone</b> di tutte le età, da piccoli attori a
+						grandi artigiani, che collaborano con entusiasmo,
+						creando maschere, costumi, scenografie e tanto altro!
+						<b>Un grande lavoro</b> di squadra che unisce talento,
+						creatività e passione!
+					</p>
+
+					<img
+						src="./assets/LOGO Oratorio.png"
+						alt="Oratorio PerDiQua"
+					/>
+				</div>
+				<button id="btn-crw" type="button" onclick="showCrowdfunding()">
+					Scopri il nostro CrowdFunding!
+				</button>
+				<div class="crowd-div" id="crowdfunding">
+					<h1>Sostieni il nostro Progetto</h1>
+					<p>
+						Aiutaci a realizzare questo sogno sostenendo il nostro
+						<b>CROWDFUNDING</b>. Puoi scegliere un pacchetto e
+						ricevere uno dei nostri <b>PREMI</b> esclusivi!
+					</p>
+					<img
+						src="./assets/crowdd.jpg"
+						alt="Crowdfunding Il Re Leone"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="div-rosso">
+				<h1>Photo Gallery</h1>
+				<h3>Coming soon</h3>
+			</div>
+		</section>
+
 		<footer>
 			<p>
-				&copy; 2024 Il Re Leone - Oratorio PerDiQua. Tutti i diritti
-				riservati.
+				&copy; 2024 Il Re Leone - Il Musical, Oratorio PerDiQua,
+				Cerbara. Tutti i diritti riservati.<br />
+				<a
+					href="https://www.instagram.com/ilreleone.cdc/"
+					target="_blank"
+					aria-label="Instagram"
+				>
+					<i class="fab fa-instagram"
+						><img src="./assets/instagram.png" alt="logo instagram"
+					/></i>
+					ilreleone.cdc
+				</a>
 			</p>
-			<a
-				href="https://www.instagram.com/ilreleone.cdc/"
-				target="_blank"
-				aria-label="Instagram"
-			>
-				<i class="fab fa-instagram"></i> ilreleone.cdc
-			</a>
 		</footer>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script>
-			function showCrowdfunding() {
-				const crowdfundingSection =
-					document.getElementById("crowdfunding");
-				crowdfundingSection.style.display = "block";
-			}
-		</script>
+		<script src="./script.js"></script>
 	</body>
 </html>

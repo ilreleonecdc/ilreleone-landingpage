@@ -1,0 +1,374 @@
+@media (max-width: 600px) {
+
+    header h1,
+    section h2 {
+        font-size: 18px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background-color: #face06;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-section {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin: 0;
+}
+
+#logo {
+    width: 35%;
+    height: auto;
+}
+
+.testo {
+    display: flex;
+    color: #d0181f;
+    justify-content: center;
+}
+
+#text h1 {
+    font-size: 6rem;
+}
+
+#text h2 {
+    font-size: 4rem;
+}
+
+
+
+
+
+/*about us*/
+.div-blu {
+    padding: 30px;
+    background-color: #2b3f8c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrittalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    position: relative;
+}
+
+.scrittalogo img {
+    width: 20%;
+    height: auto;
+    transition: opacity 3s ease-in;
+}
+
+#chisiamo {
+    color: #f88d27;
+    font-size: 3rem;
+}
+
+#descrizione {
+    margin: 20px;
+    color: #face06;
+    width: 60%;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+@media screen and (min-width: 768px) {
+    .scrittalogo {
+        flex-direction: row;
+        /* Disposizione orizzontale */
+    }
+
+    .scrittalogo img {
+        opacity: 0;
+        /* Nascosta inizialmente */
+    }
+
+    #descrizione {
+        opacity: 0;
+        /* Nascosto inizialmente */
+        transform: translateX(0);
+        /* Posizione iniziale */
+        transition: opacity 3s ease-in, transform 3s ease-in;
+        /* Animazioni */
+    }
+}
+
+#descrizione b {
+    color: #f88d27;
+    font-size: 1.4rem;
+}
+
+.crowd-div {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out forwards;
+    border-left: 10px solid #f88d27;
+    width: 500px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.crowd-div h1 {
+    color: #f88d27;
+}
+
+.crowd-div p {
+    color: #2b3f8c;
+    width: 80%;
+    text-align: center;
+    margin: 20px;
+    font-size: large;
+    line-height: 25px;
+}
+
+.crowd-div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.crowd-div img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+#btn-crw {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 30px auto;
+    width: 500px;
+    font-size: 25px;
+    border-radius: 20px;
+    color: white;
+    background-color: #f88d27;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    animation: pulse 2s infinite;
+}
+
+#btn-crw:hover {
+    background-color: #face06;
+    color: #4e2219;
+    transform: scale(1.1) rotate(-2deg);
+}
+
+
+
+/*photo gallery*/
+.div-rosso {
+    background-color: #d0181f;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.div-rosso h1 {
+    color: #face06;
+    font-size: 3rem;
+}
+
+.div-rosso h3 {
+    color: #2b3f8c;
+    font-size: 1rem;
+    margin: 50px;
+}
+
+
+/*footer*/
+footer {
+    background-color: #f88d27;
+    color: #4e2219;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px #f88d27;
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #f88d27;
+    }
+}
+
+@media (max-width: 768px) {
+    #header-section {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #logo {
+        width: 40%;
+        /* Ridimensiona il logo */
+    }
+
+    #text h1 {
+        font-size: 3.5rem;
+        /* Riduci il testo */
+    }
+
+    #text h2 {
+        font-size: 2.5rem;
+        /* Riduci il sottotitolo */
+    }
+}
+
+@media (max-width: 480px) {
+    #header-section {
+        flex-direction: column;
+        margin: 20px;
+        margin-bottom: 30px;
+    }
+
+    #logo {
+        width: 100%;
+        /* Ancora più piccolo per smartphone */
+    }
+
+    #text h1 {
+        font-size: 2.8rem;
+    }
+
+    #text h2 {
+        font-size: 2.5rem;
+    }
+
+
+    /*about us*/
+    #chisiamo {
+        font-size: 2rem;
+    }
+
+    #descrizione {
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 90%;
+    }
+
+    #descrizione b {
+        font-size: 1.1rem;
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 2;
+    }
+
+    .scrittalogo {
+        flex-direction: column;
+    }
+
+    .scrittalogo img {
+        display: none
+    }
+
+    #btn-crw {
+        width: 350px;
+        height: auto;
+        font-size: 19px;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    .div-rosso h1 {
+        font-size: 2rem;
+    }
+
+    footer {
+        height: 80px;
+    }
+
+    footer p {
+        width: 90%;
+        font-size: 14px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .crowd-div {
+        width: 90%;
+        margin: 20px 0 0 0;
+    }
+
+    .crowd-div h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .crowd-div p {
+        font-size: 16px;
+        margin: 16px 0;
+        width: 340px;
+    }
+
+
+
+}
