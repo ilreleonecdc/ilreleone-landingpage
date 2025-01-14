@@ -1,11 +1,3 @@
-@media (max-width: 600px) {
-
-    header h1,
-    section h2 {
-        font-size: 18px;
-    }
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -103,7 +95,8 @@ header {
     line-height: 2;
 }
 
-@media screen and (min-width: 1024px) {
+/* Schermi Desktop o Portatili */
+@media all and (min-width: 1280px) and (max-width: 1689px) {
     .scrittalogo {
         flex-direction: row;
         /* Disposizione orizzontale */
@@ -260,29 +253,19 @@ footer a {
     }
 }
 
-@media (max-width: 768px) {
-    #header-section {
-        flex-direction: row;
-        align-items: center;
-    }
 
-    #logo {
-        width: 40%;
-        /* Ridimensiona il logo */
-    }
+/* Tablet in modalità orizzontale */
+@media all and (min-width: 769px) and (max-width: 1279px){
 
-    #text h1 {
-        font-size: 3.5rem;
-        /* Riduci il testo */
-    }
-
-    #text h2 {
-        font-size: 2.5rem;
-        /* Riduci il sottotitolo */
-    }
 }
 
-@media (min-width: 375px) {
+/*tablet verticali*/
+@media all and (min-width: 481px) and (max-width: 768px){
+
+}
+
+/*smartphone*/
+@media all and (max-width: 480px) {
     #header-section {
         flex-direction: column;
         margin: 20px;
@@ -295,7 +278,8 @@ footer a {
     }
 
     #text h1 {
-        font-size: 2.8rem;
+        display: none;
+        font-size: 2.4rem;
     }
 
     #text h2 {
