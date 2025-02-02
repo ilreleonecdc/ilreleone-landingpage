@@ -20,3 +20,15 @@ window.addEventListener("load", function () {
 		}, 2000); // Attesa iniziale di 3 secondi
 	}
 });
+
+function updateImage() {
+	const image = document.getElementById("logo");
+	if (window.innerWidth <= 480) {
+		image.src = "./releonehtml/src/assets/logo2.png";
+	} else {
+		image.src = "./releonehtml/src/assets/RAFIKI_TITOLO.png";
+	}
+}
+
+updateImage();
+window.addEventListener("resize", updateImage);

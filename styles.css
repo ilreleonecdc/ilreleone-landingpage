@@ -27,15 +27,16 @@ header {
 
 #header-section {
     display: flex;
-    width: 70%;
+    width: 100%;
+    height: 70%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex: 1;
     margin: 0;
 }
 
 #logo {
-    width: 35%;
+    width: 30%;
     height: auto;
 }
 
@@ -46,11 +47,11 @@ header {
 }
 
 #text h1 {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 7vw, 8rem);
 }
 
 #text h2 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 5rem);
 }
 
 
@@ -68,6 +69,7 @@ header {
 }
 
 .scrittalogo {
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,16 +89,14 @@ header {
 }
 
 #descrizione {
-    margin: 20px;
     color: #face06;
-    width: 60%;
     text-align: center;
-    font-size: 1.3rem;
-    line-height: 2;
+    font-size: clamp(1rem, 2vw, 28px);
+    line-height: 1.5;
 }
 
 /* Schermi Desktop o Portatili */
-@media all and (min-width: 1280px) and (max-width: 1689px) {
+@media all and (min-width: 1321px) and (max-width: 1689px) {
     .scrittalogo {
         flex-direction: row;
         /* Disposizione orizzontale */
@@ -119,7 +119,6 @@ header {
 
 #descrizione b {
     color: #f88d27;
-    font-size: 1.4rem;
 }
 
 .crowd-div {
@@ -203,7 +202,7 @@ header {
 }
 
 .div-rosso h3 {
-    color: #2b3f8c;
+    color: white;
     font-size: 1rem;
     margin: 50px;
 }
@@ -255,8 +254,39 @@ footer a {
 
 
 /* Tablet in modalità orizzontale */
-@media all and (min-width: 769px) and (max-width: 1279px){
+@media all and (min-width: 1024px) and (max-width: 1320px){
+    #header-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;    
+    }
 
+    #descrizione{
+        opacity: 0;
+        /* Nascosto inizialmente */
+        transform: translateX(0);
+        /* Posizione iniziale */
+        transition: opacity 3s ease-in, transform 3s ease-in;
+        /* Animazioni */
+    }
+
+    #descrizione b{
+    }
+
+    .scrittalogo img{
+        opacity: 0;
+        transition: opacity 3s ease-in;
+    }
+}
+
+/*bho*/
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    .scrittalogo{
+        margin: 20px;
+    }
+
+    #descrizione{
+    }
 }
 
 /*tablet verticali*/
@@ -273,17 +303,8 @@ footer a {
     }
 
     #logo {
-        width: 100%;
+        width: 60%;
         /* Ancora più piccolo per smartphone */
-    }
-
-    #text h1 {
-        display: none;
-        font-size: 2.4rem;
-    }
-
-    #text h2 {
-        font-size: 2.5rem;
     }
 
 
@@ -293,16 +314,7 @@ footer a {
     }
 
     #descrizione {
-        font-size: 1rem;
-        line-height: 1.5;
-        width: 90%;
-    }
 
-    #descrizione b {
-        font-size: 1.1rem;
-        opacity: 1;
-        transform: translateX(0);
-        z-index: 2;
     }
 
     .scrittalogo {
