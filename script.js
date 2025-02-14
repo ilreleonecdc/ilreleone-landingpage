@@ -5,7 +5,7 @@ function showCrowdfunding() {
 
 window.addEventListener("load", function () {
 	// Applica effetti SOLO su desktop
-	if (window.innerWidth >= 768) {
+	if (window.innerWidth > 768) {
 		setTimeout(function () {
 			// Mostra l'immagine gradualmente
 			const logo = document.querySelector(".scrittalogo img");
