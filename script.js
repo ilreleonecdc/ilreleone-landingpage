@@ -37,13 +37,7 @@ function caricaWidget() {
 	if (window.innerWidth <= 768) {
 		// Carica il widget per cellulare
 		container.innerHTML =
-			'<script src="https://billetto.it/widget.js"></script>' +
 			'<billetto-organiser-widget type="list" organiser="6095917" organization="billetto.it" lang="it" theme="dark" color="#face06" include-private></billetto-organiser-widget>';
-	} else {
-		// Carica il widget per desktop
-		container.innerHTML =
-			'<script src="https://billetto.it/widget.js"></script>' +
-			'<billetto-organiser-widget type="calendar" organiser="6095917" organization="billetto.it" lang="it" theme="dark" color="#face06" include-private></billetto-organiser-widget>';
 	}
 }
 
