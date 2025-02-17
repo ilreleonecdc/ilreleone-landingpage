@@ -37,7 +37,7 @@ function caricaWidget() {
 	if (window.innerWidth <= 768) {
 		// Carica il widget per cellulare
 		container.innerHTML =
-			'<billetto-organiser-widget type="list" organiser="6095917" organization="billetto.it" lang="it" theme="dark" color="#face06" include-private></billetto-organiser-widget>';
+			'<billetto-organiser-widget type="list" organiser="6095917" organization="billetto.it" lang="it" theme="light" color="#face06" include-private></billetto-organiser-widget>';
 	}
 }
 
