@@ -21,14 +21,5 @@ window.addEventListener("load", function () {
 	}
 });
 
-function updateImage() {
-	const image = document.getElementById("logo");
-	if (window.innerWidth <= 480) {
-		image.src = "./releonehtml/src/assets/logo2.png";
-	} else {
-		image.src = "./releonehtml/src/assets/RAFIKI_TITOLO.png";
-	}
-}
-
 updateImage();
 window.addEventListener("resize", updateImage);
