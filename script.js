@@ -37,6 +37,9 @@ function caricaWidget() {
 	if (window.innerWidth <= 480) {
 		// Carica il widget per cellulare
 		container.innerHTML =
+			'<billetto-organiser-widget type="list" organiser="6095917" organization="billetto.it" lang="it" theme="light" color="#face06" include-private ></billetto-organiser-widget>';
+	} else {
+		container.innerHTML =
 			'<billetto-organiser-widget type="calendar" organiser="6095917" organization="billetto.it" lang="it" theme="light" color="#face06" include-private ></billetto-organiser-widget>';
 	}
 }
