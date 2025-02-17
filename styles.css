@@ -55,31 +55,31 @@ header {
 }
 
 .div-giallo{
-    background-color: #face06 !important;
-    display: flex !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    padding: 30px !important;
-    justify-content: center !important;
-    align-items: center !important;
+    background-color: #face06;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .div-giallo h1{
-    font-size: 3rem !important;
-    background-color: #face06 !important;
-    color: #2b3f8c !important;
+    font-size: 3rem;
+    background-color: #face06;
+    color: #2b3f8c;
 }
 
 .div-biglietti{
-    padding: 30px !important;
-    display: flex !important;
-    flex-direction: row !important;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
 }
 
 .div-biglietti p{
-    font-size: clamp(1rem, 2vw, 28px) !important;
-    width: 50% !important;
-    text-align: center !important;
+    font-size: clamp(1rem, 2vw, 28px);
+    width: 50%;
+    text-align: center;
 }
 
 /*about us*/
