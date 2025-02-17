@@ -34,10 +34,10 @@ function caricaWidget() {
 	var container = document.getElementById("widget-container"); // Un contenitore dove inserire il widget
 
 	// Verifica la larghezza della finestra
-	if (window.innerWidth <= 768) {
+	if (window.innerWidth <= 480) {
 		// Carica il widget per cellulare
 		container.innerHTML =
-			'<billetto-organiser-widget type="list" organiser="6095917" organization="billetto.it" lang="it" theme="light" color="#face06" include-private></billetto-organiser-widget>';
+			'<billetto-organiser-widget type="calendar" organiser="6095917" organization="billetto.it" lang="it" theme="light" color="#face06" include-private ></billetto-organiser-widget>';
 	}
 }
 
