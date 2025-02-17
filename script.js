@@ -21,5 +21,28 @@ window.addEventListener("load", function () {
 	}
 });
 
+window.onload = function () {
+	setTimeout(() => {
+		const widget = document.querySelector("billetto-organiser-widget");
+		if (widget && widget.shadowRoot) {
+			let style = document.createElement("style");
+			style.textContent = `
+                .billetto-container {
+                    background-color: white !important;
+                    color: black !important;
+                    font-family: Arial, sans-serif !important;
+                }
+
+                button {
+                    background-color: #face06 !important;
+                    color: black !important;
+                    border-radius: 10px !important;
+                }
+            `;
+			widget.shadowRoot.appendChild(style);
+		}
+	}, 1000);
+};
+
 updateImage();
 window.addEventListener("resize", updateImage);
