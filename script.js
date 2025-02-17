@@ -21,40 +21,5 @@ window.addEventListener("load", function () {
 	}
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	const widget = document.querySelector("billetto-organiser-widget");
-	if (widget && widget.shadowRoot) {
-		const customStyle = document.createElement("style");
-		customStyle.textContent = `.div-giallo{
-    background-color: #face06 !important;
-    display: flex !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    padding: 30px !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.div-giallo h1{
-    font-size: 3rem !important;
-    background-color: #face06 !important;
-    color: #2b3f8c !important;
-}
-
-.div-biglietti{
-    padding: 30px !important;
-    display: flex !important;
-    flex-direction: row !important;
-}
-
-.div-biglietti p{
-    font-size: clamp(1rem, 2vw, 28px) !important;
-    width: 50% !important;
-    text-align: center !important;
-}`;
-		widget.shadowRoot.appendChild(customStyle);
-	}
-});
-
 updateImage();
 window.addEventListener("resize", updateImage);
