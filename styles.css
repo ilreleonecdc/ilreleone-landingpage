@@ -294,9 +294,6 @@ footer a {
         /* Animazioni */
     }
 
-    #descrizione b{
-    }
-
     .scrittalogo img{
         opacity: 0;
         transition: opacity 3s ease-in;
@@ -307,9 +304,6 @@ footer a {
 @media all and (min-width: 769px) and (max-width: 1024px) {
     .scrittalogo{
         margin: 20px;
-    }
-
-    #descrizione{
     }
 }
 
@@ -385,9 +379,6 @@ footer a {
     /*about us*/
     #chisiamo {
         font-size: 2rem;
-    }
-
-    #descrizione {
     }
 
     .scrittalogo {
