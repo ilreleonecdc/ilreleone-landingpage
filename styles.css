@@ -80,6 +80,7 @@ billetto-organiser-widget{
     margin: 10px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .div-biglietti-text {
@@ -462,7 +463,8 @@ footer a {
     .div-biglietti-out{
         width: 97%;
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
+        width: 90%;
     }
 
     .div-biglietti-text{
