@@ -47,6 +47,7 @@ window.addEventListener("load", function () {
 		}
 	}
 
+	// Funzione per scrollare fino alla sezione
 	function scrollToSection(sectionId) {
 		document
 			.getElementById(sectionId)
@@ -55,9 +56,7 @@ window.addEventListener("load", function () {
 
 	// Creazione pulsanti di navigazione
 	const sections = [
-		{ id: "header-section", label: "Inizio" },
 		{ id: "chisiamo", label: "Chi Siamo" },
-		{ id: "crowdfunding", label: "Crowdfunding" },
 		{ id: "photo-gallery", label: "Gallery" },
 		{ id: "prenotazioni", label: "Biglietti" },
 	];
