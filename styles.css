@@ -461,6 +461,8 @@ footer a {
 
     .div-biglietti-out{
         width: 97%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .div-biglietti-text{
