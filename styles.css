@@ -54,7 +54,7 @@ header {
     font-size: clamp(2rem, 5vw, 5rem);
 }
 
-.div-giallo{
+.div-giallo {
     background-color: #face06;
     display: flex;
     width: 100%;
@@ -64,23 +64,24 @@ header {
     align-items: center;
 }
 
-.div-giallo h1{
+.div-giallo h1 {
     font-size: 3rem;
     background-color: #face06;
     color: #2b3f8c;
 }
 
-.div-biglietti{
+.div-biglietti {
     padding: 30px;
     display: flex;
     flex-direction: row;
 }
 
-.div-biglietti p{
+.div-biglietti p {
     font-size: clamp(1rem, 2vw, 28px);
     width: 50%;
     text-align: center;
 }
+
 
 /*about us*/
 .div-blu {
@@ -354,7 +355,6 @@ footer a {
         margin: 16px 0;
         width: 340px;
     }
-
 
 }
 
