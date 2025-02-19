@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
 
 	// Funzione per cambiare immagine sotto i 480px
 	function cambiaImmagine() {
-		const immagine = document.getElementById("immagine"); // Assicurati che l'elemento abbia questo ID
+		const immagine = document.getElementById("logo"); // Assicurati che l'elemento abbia questo ID
 		if (window.innerWidth < 481) {
 			immagine.src = "./releonehtml/src/assets/logo2.png"; // Sostituisci con il percorso della nuova immagine
 		} else {
