@@ -37,11 +37,23 @@ window.addEventListener("load", function () {
 		}
 	}
 
+	// Funzione per cambiare immagine sotto i 480px
+	function cambiaImmagine() {
+		const immagine = document.getElementById("immagine"); // Assicurati che l'elemento abbia questo ID
+		if (window.innerWidth < 481) {
+			immagine.src = "./releonehtml/src/assets/logo2.png"; // Sostituisci con il percorso della nuova immagine
+		} else {
+			immagine.src = "./releonehtml/src/assets/RAFIKI_TITOLO.png"; // Ripristina l'immagine originale
+		}
+	}
+
 	// Esegui la funzione al caricamento della pagina
 	cambiaTesto();
+	cambiaImmagine();
 
 	// Aggiungi un listener per cambiare il testo al resize della finestra
 	window.addEventListener("resize", cambiaTesto);
+	window.addEventListener("resize", cambiaImmagine);
 });
 
 updateImage();
