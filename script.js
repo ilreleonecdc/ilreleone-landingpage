@@ -47,6 +47,58 @@ window.addEventListener("load", function () {
 		}
 	}
 
+	function scrollToSection(sectionId) {
+		document
+			.getElementById(sectionId)
+			.scrollIntoView({ behavior: "smooth" });
+	}
+
+	// Creazione pulsanti di navigazione
+	const sections = [
+		{ id: "header-section", label: "Inizio" },
+		{ id: "chisiamo", label: "Chi Siamo" },
+		{ id: "crowdfunding", label: "Crowdfunding" },
+		{ id: "photo-gallery", label: "Gallery" },
+		{ id: "prenotazioni", label: "Biglietti" },
+	];
+
+	const navContainer = document.createElement("div");
+	navContainer.id = "nav-buttons";
+	navContainer.style.position = "fixed";
+	navContainer.style.top = "10px";
+	navContainer.style.right = "10px";
+	navContainer.style.zIndex = "1000";
+	navContainer.style.display = "flex";
+	navContainer.style.flexWrap = "wrap";
+	navContainer.style.gap = "10px";
+	navContainer.style.padding = "15px";
+	navContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+	navContainer.style.borderRadius = "15px";
+	navContainer.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
+
+	sections.forEach((section) => {
+		const button = document.createElement("button");
+		button.innerText = section.label;
+		button.style.padding = "12px 18px";
+		button.style.border = "none";
+		button.style.backgroundColor = "#FFD700";
+		button.style.color = "#000";
+		button.style.cursor = "pointer";
+		button.style.fontSize = "16px";
+		button.style.fontWeight = "bold";
+		button.style.borderRadius = "8px";
+		button.style.transition = "background-color 0.3s, transform 0.2s";
+		button.style.flex = "1 1 auto"; // Adatta i bottoni per mobile
+		button.addEventListener("click", () => scrollToSection(section.id));
+		button.onmouseover = () => (button.style.backgroundColor = "#E5C100");
+		button.onmouseout = () => (button.style.backgroundColor = "#FFD700");
+		button.onmousedown = () => (button.style.transform = "scale(0.95)");
+		button.onmouseup = () => (button.style.transform = "scale(1)");
+		navContainer.appendChild(button);
+	});
+
+	document.body.appendChild(navContainer);
+
 	// Esegui la funzione al caricamento della pagina
 	cambiaTesto();
 	cambiaImmagine();
