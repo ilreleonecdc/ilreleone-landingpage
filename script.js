@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
 		const paragrafo = document.getElementById("p1");
 		if (window.innerWidth < 481) {
 			paragrafo.innerHTML =
-				'<br />In questa sezione potrai prenotare i tuoi biglietti per lo spettacolo. Una volta cliccato il bottone qui sotto <b>"Acquista Biglietti"</b> segui questi semplici passaggi: <br />';
+				'<br />In questa sezione potrai prenotare i tuoi biglietti per lo spettacolo. Una volta cliccato il bottone qui sotto <b>"Ottieni Biglietti"</b> segui questi semplici passaggi: <br />';
 		}
 		const titoloh4 = document.getElementById("titoloh4");
 		if (window.innerWidth < 429) {

@@ -65,6 +65,10 @@ header {
     gap: 20px;
 }
 
+billetto-organiser-widget{
+    width: 50%;
+}
+
 .div-giallo h1 {
     font-size: 3rem;
     background-color: #face06;
