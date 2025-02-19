@@ -62,6 +62,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #face06;
+    gap: 20px;
 }
 
 .div-giallo h1 {
@@ -70,17 +71,34 @@ header {
     color: #2b3f8c;
 }
 
-.div-biglietti {
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
+.div-biglietti-out{
+    width: 90%;
+    margin: 10px;
 }
 
-.div-biglietti p {
-    font-size: clamp(1rem, 2vw, 28px);
-    width: 50%;
-    text-align: center;
+.div-biglietti-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(16px, 2vw, 20px);
 }
+
+.div-biglietti-text p {
+    width: 100%;
+}
+
+#p1{
+    text-align: left;
+}
+
+ol{
+    margin: 15px;
+}
+
+li{
+    margin: 5px 30px;
+}
+
 
 
 /*about us*/
@@ -429,6 +447,31 @@ footer a {
         font-size: 16px;
         margin: 16px 0;
         width: 340px;
+    }
+
+    .div-giallo h1{
+        font-size: clamp(1.2rem, 7vw, 2rem);
+    }
+
+    .div-biglietti-out{
+        width: 97%;
+    }
+
+    .div-biglietti-text{
+        width: 100%;
+    }
+
+    #p1{
+        text-align: center;
+    }
+
+    ol,
+    li{
+        text-align: left;
+    }
+
+    #titoloh4{
+        text-align: center;
     }
 
 
