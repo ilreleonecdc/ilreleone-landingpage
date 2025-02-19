@@ -54,48 +54,65 @@ window.addEventListener("load", function () {
 			.scrollIntoView({ behavior: "smooth" });
 	}
 
-	// Creazione pulsanti di navigazione
+	// Creazione menu mobile
+	const menuButton = document.createElement("button");
+	menuButton.innerText = "☰ Menu";
+	menuButton.style.position = "fixed";
+	menuButton.style.top = "10px";
+	menuButton.style.right = "10px";
+	menuButton.style.zIndex = "1000";
+	menuButton.style.padding = "12px 16px";
+	menuButton.style.border = "none";
+	menuButton.style.backgroundColor = "#FFD700";
+	menuButton.style.color = "#000";
+	menuButton.style.cursor = "pointer";
+	menuButton.style.fontSize = "16px";
+	menuButton.style.fontWeight = "bold";
+	menuButton.style.borderRadius = "6px";
+	menuButton.style.transition = "background-color 0.3s, transform 0.2s";
+
+	const navContainer = document.createElement("div");
+	navContainer.id = "nav-buttons";
+	navContainer.style.position = "fixed";
+	navContainer.style.top = "50px";
+	navContainer.style.right = "10px";
+	navContainer.style.zIndex = "999";
+	navContainer.style.display = "none";
+	navContainer.style.flexDirection = "column";
+	navContainer.style.gap = "10px";
+	navContainer.style.padding = "10px";
+	navContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+	navContainer.style.borderRadius = "10px";
+	navContainer.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
+
 	const sections = [
 		{ id: "chisiamo", label: "Chi Siamo" },
 		{ id: "photo-gallery", label: "Gallery" },
 		{ id: "prenotazioni", label: "Biglietti" },
 	];
 
-	const navContainer = document.createElement("div");
-	navContainer.id = "nav-buttons";
-	navContainer.style.position = "fixed";
-	navContainer.style.top = "10px";
-	navContainer.style.right = "10px";
-	navContainer.style.zIndex = "1000";
-	navContainer.style.display = "flex";
-	navContainer.style.flexWrap = "wrap";
-	navContainer.style.gap = "10px";
-	navContainer.style.padding = "15px";
-	navContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-	navContainer.style.borderRadius = "15px";
-	navContainer.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
-
 	sections.forEach((section) => {
 		const button = document.createElement("button");
 		button.innerText = section.label;
-		button.style.padding = "12px 18px";
+		button.style.padding = "10px 14px";
 		button.style.border = "none";
 		button.style.backgroundColor = "#FFD700";
 		button.style.color = "#000";
 		button.style.cursor = "pointer";
-		button.style.fontSize = "16px";
+		button.style.fontSize = "14px";
 		button.style.fontWeight = "bold";
-		button.style.borderRadius = "8px";
+		button.style.borderRadius = "6px";
 		button.style.transition = "background-color 0.3s, transform 0.2s";
-		button.style.flex = "1 1 auto"; // Adatta i bottoni per mobile
 		button.addEventListener("click", () => scrollToSection(section.id));
-		button.onmouseover = () => (button.style.backgroundColor = "#E5C100");
-		button.onmouseout = () => (button.style.backgroundColor = "#FFD700");
-		button.onmousedown = () => (button.style.transform = "scale(0.95)");
-		button.onmouseup = () => (button.style.transform = "scale(1)");
 		navContainer.appendChild(button);
 	});
 
+	menuButton.addEventListener("click", () => {
+		navContainer.style.display =
+			navContainer.style.display === "none" ? "flex" : "none";
+	});
+
+	document.body.appendChild(menuButton);
 	document.body.appendChild(navContainer);
 
 	// Esegui la funzione al caricamento della pagina
