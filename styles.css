@@ -106,8 +106,6 @@ li{
     margin: 5px 30px;
 }
 
-
-
 /*about us*/
 .div-blu {
     padding: 30px;
@@ -233,8 +231,6 @@ li{
     transform: scale(1.1) rotate(-2deg);
 }
 
-
-
 /*photo gallery*/
 .div-rosso {
     background-color: #d0181f;
@@ -257,7 +253,6 @@ li{
     margin: 50px;
 }
 
-
 /*footer*/
 footer {
     background-color: #f88d27;
@@ -274,7 +269,6 @@ footer a {
     align-items: center;
     padding: 5px;
 }
-
 
 @keyframes fadeIn {
     from {
@@ -301,7 +295,6 @@ footer a {
         box-shadow: 0 0 20px #f88d27;
     }
 }
-
 
 /* Tablet in modalità orizzontale */
 @media all and (min-width: 1024px) and (max-width: 1320px){
@@ -400,7 +393,6 @@ footer a {
         height: max-content;
     }
 
-
     /*about us*/
     #chisiamo {
         font-size: 2rem;
@@ -456,6 +448,10 @@ footer a {
         width: 340px;
     }
 
+    .div-giallo{
+        width: 100%;
+    }
+
     .div-giallo h1{
         font-size: clamp(1.2rem, 7vw, 2rem);
     }
@@ -484,6 +480,9 @@ footer a {
         text-align: center;
     }
 
+    billetto-organiser-widget {
+        width: 100%;
+    }
 
 
 }
