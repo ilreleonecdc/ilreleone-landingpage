@@ -74,6 +74,8 @@ header {
 .div-biglietti-out{
     width: 90%;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .div-biglietti-text {
