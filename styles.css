@@ -55,13 +55,13 @@ header {
 }
 
 .div-giallo {
-    background-color: #face06;
     display: flex;
     width: 100%;
     flex-direction: column;
     padding: 30px;
     justify-content: center;
     align-items: center;
+    background-color: #face06;
 }
 
 .div-giallo h1 {
