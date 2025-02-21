@@ -83,6 +83,10 @@ billetto-organiser-widget {
     align-items: center;
 }
 
+#link-evento{
+    text-align: center;
+}
+
 .div-biglietti-text {
     width: 60%;
     display: flex;
