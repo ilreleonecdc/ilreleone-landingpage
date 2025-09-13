@@ -62,7 +62,7 @@
 						alt="Oratorio PerDiQua"
 					/>
 				</div>
-				<button id="btn-crw" type="button" onclick="showCrowdfunding()">
+				<!-- <button id="btn-crw" type="button" onclick="showCrowdfunding()">
 					Scopri il nostro CrowdFunding!
 				</button>
 				<div class="crowd-div" id="crowdfunding">
@@ -76,7 +76,7 @@
 						src="./releonehtml/src/assets/crowdd.jpg"
 						alt="Crowdfunding Il Re Leone"
 					/>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<section class="section">
@@ -126,15 +126,17 @@
 					</div>
 					<div id="div-biglietti-link">
 						<script src="https://billetto.it/widget.js"></script>
-						<billetto-organiser-widget
-							type="list"
-							organiser="6095917"
+						<billetto-widget
+							type="event"
+							event="1665657"
 							organization="billetto.it"
 							lang="it"
 							theme="light"
-							color="#face06"
-							include-private
-						></billetto-organiser-widget>
+							color="#4267b2"
+							button-style="rounded"
+							font-family="Arial, Helvetica, sans-serif"
+							background-color="#ffffff"
+						></billetto-widget>
 						<p id="link-evento">
 							Se non visualizzi correttamente il pulsante clicca
 							qui:

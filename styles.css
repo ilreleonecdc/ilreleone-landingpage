@@ -18,7 +18,7 @@ html {
 
 body {
 	background-color: rgba(0, 0, 0, 0.6); /* sfondo scuro trasparente */
-	pointer-events: none; /* disattiva interazioni su tutto */
+	/* pointer-events: none; disattiva interazioni su tutto */
 }
 
 .section {
@@ -74,7 +74,7 @@ header {
 	gap: 20px;
 }
 
-billetto-organiser-widget {
+billetto-widget {
 	width: 100%;
 }
 
