@@ -55,7 +55,6 @@ window.addEventListener("load", function () {
 	}
 
 	// Creazione menu mobile
-	const menuButton = document.createElement("button");
 	menuButton.innerText = "☰ Menu";
 	menuButton.style.position = "fixed";
 	menuButton.style.top = "10px";
