@@ -9,6 +9,24 @@
 	font-style: normal;
 }
 
+.card-img-top {
+	width: inherit;
+	border-radius: inherit;
+	max-height: max-content;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-container {
+	height: auto;
+	border-radius: 1rem;
+}
+
+.photo-container {
+	justify-content: center;
+	gap: 1rem;
+	padding-top: 1rem;
+}
+
 body,
 html {
 	width: 100%;
